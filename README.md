@@ -37,6 +37,7 @@ If you are able to successfully unlock voltage control please make a pull reques
 ### ⚠️ Device Quirks & Workarounds
 
 **Dell Latitude E5570 (Tested on: BIOS 1.34.3 & i5-6300HQ)**
+
 On this specific model (at least on latest BIOS), the BIOS will automatically reset the Overclocking Lock bit back to `1` upon restarting. 
 
 **Workaround:** To bypass this, you can configure an EFI shell script that sets the locking bit to `0` on every boot.
