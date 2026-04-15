@@ -10,6 +10,7 @@
 |           | 7300         | [@delacor](https://github.com/delacor) (Tested on: BIOS 1.24)                               | 0x789   |
 |           | 7480         | [@msprengholz](https://github.com/tadghh/Dell-unlock-undervolting/issues/14)              | 0x59C   |
 |           | 7490         | [@prifak](https://github.com/tadghh/Dell-unlock-undervolting/issues/10)                   | 0x5DC   |
+|           | E5570         | [@DarkoGNU](https://github.com/DarkoGNU) (Tested on: BIOS 1.34.3 & i5-6300HQ, [See Quirks](#-device-quirks)) | 0x183   |
 | **Precision** | 3630     | [@msprengholz](https://github.com/tadghh/Dell-unlock-undervolting/issues/14)              | 0x65C   |
 |           | 5520         | [@dimasafonis](https://github.com/tadghh/Dell-unlock-undervolting/issues/4)               | 0x59C   |
 | **Optiplex** | 3060 Micro | [@RonK-0](https://github.com/tadghh/Dell-unlock-undervolting/issues/5)                    | 0x65A   |
@@ -32,6 +33,16 @@ Doubtful any 12th gen or newer would work due to the CPU architecture changes.
 ### 📝 Note
 
 If you are able to successfully unlock voltage control please make a pull request [here](https://github.com/tadghh/Dell-unlock-undervolting) adding your devices series/model to this list. 
+
+### ⚠️ Device Quirks & Workarounds
+
+**Dell Latitude E5570 (Tested on: BIOS 1.34.3 & i5-6300HQ)**
+On this specific model (at least on latest BIOS), the BIOS will automatically reset the Overclocking Lock bit back to `1` upon restarting. 
+
+**Workaround:** To bypass this, you can configure an EFI shell script that sets the locking bit to `0` on every boot.
+* **Note:** It usually takes 2 to 3 consecutive boots with this script active for the change to "click" and for voltage control/undervolting to become unlocked.
+
+-> Information about my script here <-
 
 # Dell/Lenovo Unlocking Voltage Control
 
